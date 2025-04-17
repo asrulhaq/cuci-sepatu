@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Queen Shoes Cleaning</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('background.jpg') no-repeat center center/cover;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .hero {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      color: #101322;
+    }
+
+    .hero p {
+      color: #333;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .btn-primary-custom {
+      background-color: #fdbb00;
+      border: 2px solid #000;
+      color: #000;
+      font-weight: bold;
+      padding: 10px 25px;
+      border-radius: 10px;
+    }
+
+    .navbar-brand img {
+      height: 70px;
+    }
+
+    .map-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 350px;
+      border: 0;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .btn-primary-custom {
+        padding: 8px 20px;
+      }
+
+      iframe {
+        height: 300px;
+      }
+    }
+
+    .about-us {
+      padding: 40px 20px;
+      background-color: #f7f7f7;
+    }
+
+    .about-us h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .about-us p {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .about-us ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .about-us ul li {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .about-us ul li strong {
+      font-weight: bold;
+    }
+
+    /* Smooth Scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="asset/img/logo.jpg" alt="Logo">
+      </a>
+
+      <!-- Menu -->
+      <div class="d-none d-lg-block">
+        <ul class="navbar-nav flex-row gap-4 fw-semibold">
+          <li class="nav-item"><a class="nav-link" href="#">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#map-container">Lokasi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Galeri Kami</a></li>
+        </ul>
+      </div>
+
+      <!-- Tombol Daftar Menu -->
+      <a href="daftar_menu.html" class="btn btn-primary-custom d-none d-lg-inline-block">Daftar Menu</a>
+
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Solusi Terpercaya Perawatan Sepatu Kesayangan Kamu.</h1>
+      <p>Kami memberikan layanan terbaik untuk perawatan sepatu, tas dan topi. Bekerja secara profesional, menggunakan teknik khusus dengan alat dan bahan premium.</p>
+    </div>
+  </section>
+
+  <!-- Tentang Queen Shoes Cleaning -->
+  <section id="about" class="about-us">
+    <div class="container">
+      <h2>Tentang Queen Shoes Cleaning</h2>
+      <p class="lead mb-4">Sepatu kesayangan Anda membutuhkan perawatan khusus agar tetap awet dan tampil sempurna? Di Queen Shoes Cleaning, kami menyediakan layanan cuci sepatu yang profesional dengan menggunakan bahan pembersih premium dan teknik yang tepat.</p>
+
+      <p class="mb-4 text-justify">Kami memahami betapa pentingnya menjaga kebersihan sepatu Anda, baik untuk keperluan sehari-hari maupun acara khusus. Dengan pengalaman dan keterampilan yang kami miliki, sepatu Anda akan terlihat seperti baru lagi setelah dicuci oleh tim ahli kami.</p>
+
+      <h3 class="mb-3">Kenapa Memilih Kami?</h3>
+      <ul class="mb-4 text-justify">
+        <li><strong>Profesional dan Terpercaya</strong>: Kami berpengalaman dalam menangani berbagai jenis sepatu, mulai dari sepatu olahraga hingga sepatu formal, dengan perhatian penuh pada detail.</li>
+        <li><strong>Pembersihan Mendalam</strong>: Kami tidak hanya mencuci, tetapi juga melakukan perawatan khusus agar sepatu tetap awet dan terjaga kualitasnya.</li>
+        <li><strong>Bahan Pembersih Berkualitas</strong>: Kami menggunakan bahan pembersih yang ramah lingkungan, aman, dan tidak merusak bahan sepatu Anda.</li>
+        <li><strong>Cepat dan Efisien</strong>: Proses pembersihan kami dilakukan dengan cepat tanpa mengorbankan kualitas, memastikan sepatu Anda kembali dengan waktu yang tepat.</li>
+      </ul>
+
+      <p class="mb-4 text-justify">Jadi, jangan biarkan sepatu Anda kotor dan tidak terawat! Serahkan pada Queen Shoes Cleaning dan rasakan perbedaannya. Kami siap memberikan layanan terbaik untuk menjaga sepatu kesayangan Anda tetap bersih dan awet.</p>
+
+      <p><a href="https://wa.me/6281295679610?text=Halo%2C%20saya%20ingin%20menggunakan%20layanan%20cuci%20sepatu." class="btn btn-primary-custom" target="_blank">Hubungi Kami Sekarang</a></p>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <div id="map-container" class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1983.1024406660006!2d107.029629!3d-6.2367038!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698f8036258a19%3A0x815394b8d2a8c360!2sLaundry%20Sepatu%2C%20Tas%20dan%20Topi%20(Queen%20Shoes%20Cleaning)!5e0!3m2!1sid!2sid!4v1744890242126!5m2!1sid!2sid"
+      width="100%" height="350" style="border-radius:16px; box-shadow:0 4px 10px rgba(0, 0, 0, 0.2);" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+</body>
+
+</html>
