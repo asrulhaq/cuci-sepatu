@@ -1,0 +1,121 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url('background.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.hero {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #101322;
+}
+
+.hero p {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn-primary-custom {
+  background-color: #fdbb00;
+  border: 2px solid #000;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.btn-primary-custom:hover {
+  background-color: #e0a800;
+  color: #fff;
+}
+
+.navbar-brand img {
+  height: 70px;
+}
+
+.map-container {
+  display: flex;
+  justify-content: flex-start; /* Map kiri */
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.map-container iframe {
+  width: 600px;
+  height: 350px;
+  border: 0;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-us {
+  padding: 40px 20px;
+  background-color: #f7f7f7;
+}
+
+.about-us h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-us p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-us ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.about-us ul li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.about-us ul li strong {
+  font-weight: bold;
+}
+
+footer.footer {
+  background-color: #101322;
+  color: #fff;
+  padding: 15px 0;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn-primary-custom {
+    padding: 8px 20px;
+  }
+
+  .map-container {
+    justify-content: center; /* Pusatkan saat mobile agar enak dilihat */
+  }
+
+  .map-container iframe {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

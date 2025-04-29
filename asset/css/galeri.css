@@ -1,0 +1,125 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Membuat halaman minimal setinggi layar */
+  }
+  
+  .container {
+    flex: 1; /* Menjamin konten mengisi ruang yang tersedia */
+  }
+  
+  /* Section Gallery */
+  .gallery-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #101322;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  /* Gallery Item */
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .gallery-item img {
+    transition: transform 0.3s ease, filter 0.3s ease; 
+    border-radius: 10px;
+  }
+  
+  .gallery-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+  }
+  
+  /* Back Button (Menu Style) */
+  .btn-back {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #fdbb00;
+    border: 2px solid #000;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 10px; /* Membuat bentuk tombol lebih melengkung */
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: auto;
+    letter-spacing: 1px;
+    margin-top: 30px; /* Menambahkan jarak atas agar tombol lebih jauh dari gambar */
+    margin-bottom: 30px; /* Menambahkan jarak bawah */
+  }
+  
+  .btn-back:hover {
+    background-color: #e0a800;
+    color: #fff;
+    border-color: #e0a800; /* Ubah warna border saat hover */
+    transform: scale(1.05); /* Efek pembesaran saat hover */
+  }
+  
+  .btn-back:active {
+    background-color: #c69500;
+    color: #fff;
+    border-color: #c69500; /* Ubah warna border saat aktif */
+    transform: scale(0.98); /* Efek kecil saat tombol diklik */
+  }
+  
+  .btn-back:focus {
+    outline: none; /* Menghilangkan outline fokus */
+    box-shadow: 0 0 0 4px rgba(255, 193, 7, 0.5); /* Menambah efek fokus dengan bayangan */
+  }
+  
+  /* Footer Styles */
+  footer.footer {
+    background-color: #101322;
+    color: #fff;
+    padding: 15px 0;
+    margin-top: auto; /* Footer selalu di bawah */
+    text-align: center;
+  }
+  
+  footer.footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  /* Bootstrap Grid Customization */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .col-sm-6, .col-md-4, .col-lg-4 {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    box-sizing: border-box;
+  }
+  
+  @media (max-width: 768px) {
+    .col-sm-6, .col-md-4, .col-lg-4 {
+      flex: 1 1 calc(50% - 20px); /* Menampilkan 2 gambar per baris */
+      max-width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .col-sm-6, .col-md-4, .col-lg-4 {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+  
