@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,11 +8,10 @@
 </head>
 
 <body>
-
-  <!-- Judul -->
   <h1>Daftar Menu</h1>
+  
 
-  <!-- Container untuk Gambar -->
+  <!-- Container Gambar -->
   <div class="image-container">
     <img id="image" src="asset/img/price list 1.webp" alt="Gambar 1" />
   </div>
@@ -26,17 +24,38 @@
   </div>
 
   <script>
-    const imageSources = [
-      "asset/img/price list 1.webp",
-      "asset/img/price list 2.webp",
-      "asset/img/price list 3.webp"
-    ];
+    // Fungsi untuk load menu gambar
+    function loadMenuImages() {
+      const imageData = JSON.parse(localStorage.getItem('images')) || [];
+      const menuList = document.getElementById('menuList');
+      menuList.innerHTML = ""; // Clear list sebelumnya
 
+      if (imageData.length > 0) {
+        imageData.forEach((item, index) => {
+          const li = document.createElement('li');
+          const img = document.createElement('img');
+          img.src = item;
+          img.alt = `Menu Gambar ${index + 1}`;
+          img.style.width = '100px';
+          img.style.height = '100px';
+          li.appendChild(img);
+          menuList.appendChild(li);
+        });
+      } else {
+        const li = document.createElement('li');
+        li.textContent = "Tidak ada data gambar yang tersedia.";
+        menuList.appendChild(li);
+      }
+    }
+
+    // Fungsi navigasi gambar utama
     let currentIndex = 0;
+    let imageSources = JSON.parse(localStorage.getItem('images')) || [];
 
     function updateImage() {
-      const imageElement = document.getElementById("image");
-      imageElement.src = imageSources[currentIndex];
+      if (imageSources.length > 0) {
+        document.getElementById("image").src = imageSources[currentIndex];
+      }
     }
 
     function nextImage() {
@@ -52,8 +71,13 @@
         updateImage();
       }
     }
+
+    // Load data saat halaman dimuat
+    document.addEventListener('DOMContentLoaded', function() {
+      loadMenuImages(); // Muat gambar ke daftar
+      updateImage(); // Perbarui gambar utama saat halaman dimuat
+    });
   </script>
 
 </body>
-
 </html>
