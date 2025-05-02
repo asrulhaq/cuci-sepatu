@@ -49,7 +49,7 @@
       <button type="submit" class="btn btn-success">Simpan Lokasi</button>
     </form>
 
-    <!-- ================ Form Update Gambar Menu ================= -->
+    <!-- ================= Form Update Gambar Menu ================= -->
     <h2>Update Gambar Menu</h2>
     <form id="updateImageForm">
       <div class="mb-3">
@@ -183,27 +183,6 @@
 
     // ======= INIT PAGE ========
     document.addEventListener('DOMContentLoaded', function() {
-      // Menambahkan data lokasi default jika tidak ada di localStorage
-      if (!localStorage.getItem('lokasi')) {
-        const defaultLokasi = [
-          {
-            area: 'Bekasi Timur',
-            cabang: 'Wisma Jaya (Pusat)',
-            jam: 'Selasa - Minggu 9.00 - 17.00',
-            maps: 'https://www.google.com/maps/search/?api=1&query=-6.2367038,107.029629',
-            wa: 'https://api.whatsapp.com/send?phone=6285157707697&text=Halo%2C%20saya%20ingin%20menggunakan%20layanan%20cuci%20sepatu.'
-          },
-          {
-            area: 'Bekasi Utara',
-            cabang: 'Pondok Ungu Permai',
-            jam: 'Senin - Sabtu, 12.00 - 19.00 (Jumat 13.00 - 19.00)',
-            maps: 'https://www.google.com/maps/search/?api=1&query=Pondok%20Ungu%20Permai%2C%20Bekasi%20Utara',
-            wa: 'https://api.whatsapp.com/send?phone=6285117266094&text=Halo%2C%20saya%20ingin%20menggunakan%20layanan%20cuci%20sepatu.'
-          }
-        ];
-        localStorage.setItem('lokasi', JSON.stringify(defaultLokasi));
-      }
-
       loadLokasiDropdown();
       loadImages();
     });
