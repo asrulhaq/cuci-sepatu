@@ -8,42 +8,48 @@
   <link rel="stylesheet" href="asset/css/lokasi.css">
 </head>
 <body>
-  <hr>
-  <h2 class="text-center mb-4">Daftar Lokasi Queen Shoes Cleaning</h2>
+  <div class="container py-5">
+    <h2 class="text-center mb-4">Daftar Lokasi Queen Shoes Cleaning</h2>
+    
+    <div class="row g-4">
+      <!-- Lokasi 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="lokasi-card p-3 shadow-sm rounded">
+          <span class="badge bg-light text-dark mb-2">Bekasi Timur</span>
+          <h5 class="fw-bold">Wisma Jaya<br><small class="text-muted">(Pusat)</small></h5>
+          <p>Selasa - Minggu 9.00 - 17.00</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=-6.2367038,107.029629" class="btn btn-dark w-100 mb-2" target="_blank">Lokasi</a>
+          <a href="https://api.whatsapp.com/send?phone=6285157707697&text=Halo%2C%20saya%20ingin%20menggunakan%20layanan%20cuci%20sepatu." class="btn btn-warning w-100" target="_blank">Whatsapp</a>
+        </div>
+      </div>
 
-  <div class="row g-4" id="lokasiContainer"></div>
+      <!-- Lokasi 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="lokasi-card p-3 shadow-sm rounded">
+          <span class="badge bg-light text-dark mb-2">Bekasi Utara</span>
+          <h5 class="fw-bold">Pondok Ungu Permai<br><small class="text-muted"></small></h5>
+          <p>Senin - Sabtu, 12.00 - 19.00<br>(Jumat 13.00 - 19.00)</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Pondok%20Ungu%20Permai%2C%20Bekasi%20Utara" class="btn btn-dark w-100 mb-2" target="_blank">Lokasi</a>
+          <a href="https://api.whatsapp.com/send?phone=6285117266094&text=Halo%2C%20saya%20ingin%20menggunakan%20layanan%20cuci%20sepatu." class="btn btn-warning w-100" target="_blank">Whatsapp</a>
+        </div>
+      </div>
 
-  <script>
-    const lokasiContainer = document.getElementById('lokasiContainer');
+      <!-- Lokasi 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="lokasi-card p-3 shadow-sm rounded">
+          <span class="badge bg-light text-dark mb-2">Tangerang</span>
+          <h5 class="fw-bold">Gading Serpong<br><small class="text-muted"></small></h5>
+          <p>Senin - Sabtu, 12.00 - 19.00<br>(Jumat 13.00 - 19.00)</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Gading%20Serpong%2C%20Tangerang" class="btn btn-dark w-100 mb-2" target="_blank">Lokasi</a>
+          <a href="https://api.whatsapp.com/send?phone=6282117854825&text=Halo%2C%20saya%20ingin%20menggunakan%20layanan%20cuci%20sepatu." class="btn btn-warning w-100" target="_blank">Whatsapp</a>
+        </div>
+      </div>
+    </div>
 
-    // Function to load lokasi from localStorage
-    function loadLokasiData() {
-      const lokasiData = JSON.parse(localStorage.getItem('lokasi')) || [];
-      lokasiContainer.innerHTML = ''; // Clear container before adding new data
-
-      lokasiData.forEach((lokasi) => {
-        const lokasiElement = document.createElement('div');
-        lokasiElement.classList.add('col-md-4');
-
-        lokasiElement.innerHTML = `
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">${lokasi.cabang}</h5>
-              <p class="card-text">
-                ${lokasi.area} <br>
-                <strong>Jam:</strong> ${lokasi.jam} <br>
-                <a href="${lokasi.maps}" target="_blank">Google Maps</a><br>
-                <a href="${lokasi.wa}" target="_blank">WhatsApp</a>
-              </p>
-            </div>
-          </div>
-        `;
-        lokasiContainer.appendChild(lokasiElement);
-      });
-    }
-
-    // Run the function on page load
-    document.addEventListener('DOMContentLoaded', loadLokasiData);
-  </script>
+    <!-- Tombol kembali ke beranda -->
+    <div class="text-center mt-5">
+      <a href="index.html" class="btn btn-outline-primary kembali-btn">← Kembali ke Beranda</a>
+    </div>
+  </div>
 </body>
 </html>
